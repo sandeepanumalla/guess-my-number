@@ -13,10 +13,12 @@ body{
     padding-bottom: 2rem;
     position: relative;
     font-size: 2.5rem;
-    top: 2rem;
+    bottom: 2.5rem;
     width: 100%;
-    left: 3rem;
+    left: 25%;
 }
+
+
 .answer{
     position: relative;
     bottom: 4rem;
@@ -30,10 +32,11 @@ body{
 }
 
 .header-section{
-    display: flex; 
-    height: 12rem;
-    justify-content: space-between;
-    border-bottom: .8rem solid rgb(248, 238, 238);
+     /* display: flex; */
+     height: 12rem;
+     /* flex-direction: row; */
+     /* justify-content: space-between; */
+     border-bottom: .8rem solid rgb(248, 238, 238);
 }
 
 .header_btn{
@@ -59,6 +62,7 @@ body{
 .container{
     padding-top: 10rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     
@@ -101,6 +105,9 @@ body{
 .instruction{
     padding-top: 1rem;
     padding-right: .3rem;
+    right: 1rem;
+    position: absolute;
+    top: 1rem;
 }
 
 main{
@@ -155,11 +162,61 @@ main{
 }
 
 
-@media(max-width:480px){
-    .title{
-        font-size: 1rem;
-      border: 1px solid white;
-
-
+@media(max-width:411px){
+    *{
+        max-width: 411px;
+        /* border: 1px solid white; */
     }
+
+    .header-section{
+     
+        
+    }
+    .title{
+        font-size: 1.1rem;
+     width: 18rem;
+     position: relative;
+     top: .1rem;
+     left: 2rem;
+    }
+    .header_btn{
+        width: auto;
+        font-size: .8rem;
+        margin-top: .2rem;
+        margin-left: .2rem;
+        margin-right: 0;
+    }
+    .instruction{
+        font-size: .7rem;
+    }
+
+    .answer{
+        font-size: 3rem;
+        height: 4rem;
+        width: 5rem;
+        position: relative;   
+    }
+    .container-right{
+        text-align: center;
+    }
+    .message-container{
+        margin-top: -4rem;
+        padding-bottom: -2rem;
+       margin-left: 1rem;
+        
+    }
+    .container-left{
+        margin-right: 4rem;
+    }
+    .score{
+        position: relative;
+        top: 9rem;
+    }
+    .high-score{
+        position: relative;
+        top: 8rem;
+    }
+
+
+
 }
