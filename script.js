@@ -79,5 +79,6 @@ Again.addEventListener('click',()=>
     console.log("you are playing again. Your Score is ", score);
     console.log("High score is ", highScore);
     highScoreElement.children[0].children[0].textContent=highScore;
+    document.querySelector(".answer").textContent="?"
     message.textContent="Start guessing...";
 })
