@@ -64,7 +64,7 @@ body{
     margin-top: -4rem;
     display: flex;
    flex-direction: row;
-
+   flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items: center;
     
@@ -167,7 +167,7 @@ main{
 
 @media(max-width:480px){
     *{
-        max-width: 415px;
+        max-width: 480px;
      
     }
 
@@ -190,7 +190,8 @@ main{
         font-size: .7rem;
     }
     .container{
-        flex-direction: column;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .answer{
         font-size: 3rem;
@@ -202,20 +203,23 @@ main{
         text-align: center;
     }
     .message-container{
-        margin-top: -3rem;
+        margin-top: -2rem;
        
         margin-left: .1rem;
     }
     .container-left{
-        margin-right: 4rem;
+        margin-right: 8rem;
+        position: relative;
+        bottom: 13rem;
+        
     }
     .score{
         position: relative;
-        top: 9rem;
+        top: 11rem;
     }
     .high-score{
         position: relative;
-        top: 8rem;
+        top: 10rem;
     }
     #btn{
         width: 12.7rem;
@@ -223,22 +227,18 @@ main{
 
 }
 
-@media(max-width:330px){
-    .title{
-        font-size: 1.1rem;
+@media(min-width:331px) and (max-width:420px){
+    *{
+      max-width: 420px;
     }
+
     .message-container{
-        font-size: 1rem;
+        position: relative;
+        left: 3rem;
     }
     .container-left{
-        position: relative;
-        right: 1.6rem;
-    }
-}
-
-@media(max-width:420px){
-    *{
-      
+       margin-left: 2rem;
+       margin-right: 6rem;
     }
     .title{
         font-size: 1.1rem;
@@ -248,8 +248,59 @@ main{
     .answer{
         font-size: 2.5rem;
     }
+    .score{
+        position: relative;
+        top: 11rem;
+        left: 1rem;
+    }
+    .high-score{
+        position: relative;
+        top: 10rem;
+
+        left: 1rem;
+        
+    }
     .container-left{
         position: relative;
         left: 1.6rem;
     }
+}
+
+
+@media(max-width:330px){
+    *{
+       
+    }
+    .title{
+        font-size: 1.1rem;
+        position: relative;
+        left: -1rem;
+    }
+    .container{
+        height:20%;
+    }
+    .message-container{
+        font-size: 1rem;
+    }
+    .score{
+        position: relative;
+        top: 11rem;
+        left: -.5rem;
+    }
+    .high-score{
+        position: relative;
+        top: 10rem;
+        left: -.5rem;
+        
+    }
+    .container-left, .container-right{
+        position: relative;
+        left: 3rem;
+        
+    }
+    .container-left{
+        margin-left: 2rem;
+        margin-right: 5rem;
+    }
+    
 }
